@@ -1,0 +1,50 @@
+---
+import './src/styles/global.css'
+import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
+
+const { title } = Astro.props;
+
+interface Props {
+	title: string;
+}
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{title}</title>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="description" 
+		content="Aplicacion para el control y verificación del carro de paro para el personal de salud." />
+		<meta name="author" content="Gabriel Agüero " />
+
+		<meta name="og:title" content="Aplicacion para el carro de paro" />
+		<meta name="og:description" content="Aplicacion para el control y verificación del carro de paro para el personal de salud." />
+		<!-- <meta name="og:image" content="/preview.png" /> -->
+		<!-- <meta name="og:url" content="https://astro.new" /> -->
+	</head>
+	<body>
+		<Header />
+		<main>
+			<slot />
+		</main>
+		<Footer />			
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	main {
+		min-height: 100vh;
+	}
+</style>
