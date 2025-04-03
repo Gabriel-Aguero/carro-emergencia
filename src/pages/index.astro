@@ -1,6 +1,7 @@
 ---
-import Hero from '../components/Hero.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from '@/layouts/Layout.astro';
+import Hero from '@/sections/Hero.astro';
+import Presentation from '@/sections/Presentation.astro';
 
 const title = 'Aplicacion para el carro de paro';
 
@@ -8,4 +9,5 @@ const title = 'Aplicacion para el carro de paro';
 
 <Layout title={title}>
 	<Hero />
+	<Presentation />
 </Layout>
